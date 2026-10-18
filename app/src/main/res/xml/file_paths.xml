@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  Only the camera-capture directory is shared, and only with the camera app
-  through a one-shot, read-only URI grant. Nothing else in the app's private
-  storage is exposed.
--->
-<paths>
-    <cache-path name="captures" path="captures/" />
-</paths>
