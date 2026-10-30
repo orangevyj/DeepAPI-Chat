@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Data extraction rules for API >= 31.
+
+   Cloud backup excludes the plaintext settings file (holds the API key) and the
+   attachment blobs. Device-to-device transfer keeps everything, since moving the
+   whole app to a new phone is what the user expects.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="file" path="data/settings.json" />
+        <exclude domain="file" path="data/attachments" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="file" path="." />
+    </device-transfer>
+</data-extraction-rules>
